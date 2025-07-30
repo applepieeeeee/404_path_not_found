@@ -2,9 +2,11 @@
 //See the README file for more information
 
 /* VARIABLES */
-let font1;
 
-// Sound and music variables
+let font1; // monospace font used throughout the game
+
+
+// Sound and music variables 
 // bgMusic is the background music that plays on all the screens
 let bgMusic; 
 let isMuted = false;
@@ -14,10 +16,10 @@ let musicButton;
 // buttons for different screens
 // enterButton is the button on the home screen
 let enterButton; 
-  
+
 let a1Button;
 let a2Button;
-let b1Button;
+let b1Button; 
 let b2Button;
 let backButton;
     
