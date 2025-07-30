@@ -274,6 +274,14 @@ function showHomepage(){
 }
 
 
+
+
+
+
+
+
+
+
 /* FUNCTIONS TO DISPLAY SCREENS */
 function showScreen0(){
   print("back to screen 0");
@@ -476,8 +484,6 @@ function showScreen5(){
   backButton.pos = { x: 60, y: 360 };
 
 }
-
-
 
 function drawTopBar() {
   // Rounded top bar
