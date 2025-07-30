@@ -1,5 +1,4 @@
-console.log("loaded");
-
+print("loaded");
 
 //Press a button to choose your path
 //See the README file for more information
@@ -37,15 +36,16 @@ let picker;
 let star1;
 let star2;
 
-// displayed on the virus screen
+
+// displayed on the virus screen                                           
 // virus is the virus page icon that appears on screen 3
 let virus;
-
 let pointer;
 
 // profile page and back buttons
 let smiski;
 let backSmiski; // note this is actually a fish icon now
+
 
 /* PRELOAD RUNS ONCE */
 // preload is used to load assets before the sketch starts
@@ -55,6 +55,7 @@ function preload() {
   soundOn = loadImage('ICONS/SOUNDON.png');
 }
 
+
 /* SETUP RUNS ONCE */
 function setup() {
   bgMusic.loop();
@@ -63,10 +64,11 @@ function setup() {
   // Setup
   createCanvas(600, 400);
   textAlign(CENTER);
+  rectMode(CENTER);
+  imageMode(CENTER);
   textSize(20);
   noStroke();
   
-
   // Create sprites for icons displayyed on the screen 0 
   ball = new Sprite();
   ball.img = loadImage('ICONS/BALL.png');
@@ -91,7 +93,7 @@ function setup() {
   page.x = 110; 
   page.y = 350; 
   page.visible = true;
-  page.rotation = 16;
+  page.rotation = 16; 
 
   picker = new Sprite();
   picker.img = loadImage('ICONS/picker.png');
@@ -112,7 +114,7 @@ function setup() {
   star2.visible = true;
 
 
-  // buttons not on home screen (screen 0)
+  // Buttons not on home screen (screen 0)
   virus = new Sprite();
   virus.img = loadImage('ICONS/virus.png');
   virus.x = width/2; 
@@ -213,7 +215,6 @@ function draw() {
   
   // this is the code that actually allows the pages to run
   if (screen == 1) {
-
     if (a1Button.mouse.presses()) {
       print("Display screen 2");
       showScreen2();
@@ -236,6 +237,7 @@ function draw() {
     }
   } 
 
+
   // go back to screen 0 if the back button is pressed
   if (backButton.mouse.presses()){
     showScreen0();
@@ -245,6 +247,7 @@ function draw() {
   // fixed bug; they kept rotating for no reason :(
   enterButton.rotation = 0;
   backButton.rotation = 0;
+
 
 }
 
@@ -312,6 +315,7 @@ function showHomepage(){
 
 /* FUNCTIONS TO DISPLAY SCREENS */
 /*
+
   In total there are 6 screens: screen 0 is the homepage,
   screen 1 is the page you go to after enter button, 
 
