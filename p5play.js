@@ -132,6 +132,7 @@ p5.prototype.registerMethod('init', function p5PlayInit() {
     'y'
   ];
 
+  
   let eventTypes = {
     _collisions: ['_collides', '_colliding', '_collided'],
     _overlappers: ['_overlaps', '_overlapping', '_overlapped']
