@@ -229,6 +229,7 @@ function showHomepage(){
   rect(0, 0, 600, 400, 20); 
   drawTopBar();
 
+  
   ball.visible = false;
   fish.visible = false;
   cat.visible = false;
