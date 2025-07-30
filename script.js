@@ -407,7 +407,7 @@ function showScreen1(){
 
 function showScreen2(){  
 
-  fill("#981d50ff");
+  fill("#9a2455ff");
   rect(0, 0, 600, 400, 20); 
   drawTopBar();
 
