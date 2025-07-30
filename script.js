@@ -63,6 +63,7 @@ function setup() {
   textSize(20);
   noStroke();
   
+
   // Create sprites for icons displayyed on the screen 0 
   ball = new Sprite();
   ball.img = loadImage('ICONS/BALL.png');
@@ -107,6 +108,8 @@ function setup() {
   star2.y = 270; 
   star2.visible = true;
 
+
+  // buttons not on home screen (screen 0)
   virus = new Sprite();
   virus.img = loadImage('ICONS/virus.png');
   virus.x = width/2; 
@@ -149,6 +152,8 @@ function setup() {
 
 /* DRAW LOOP REPEATS */
 function draw() {
+
+  // this makes sure the record is always rotating
   if (!isMuted){
     musicButton.rotation += 1;
   }
@@ -172,6 +177,7 @@ function draw() {
   a2Button.text = "quiet...";
   a2Button.color = "#dbcede";
 
+  // so that the text is black
   fill(0);
 
   // Check enter button
@@ -186,6 +192,7 @@ function draw() {
   fill(255);
   text("press to \nmute <3", 52, 95);
 
+  // pauses music if the music button is pressed
   if (musicButton.mouse.presses()) {
     isMuted = !isMuted;  
 
@@ -196,10 +203,12 @@ function draw() {
     }
   }
 
+  // displays the homepage if you click on the smiski icon
   if ( smiski.mouse.presses() ){
     showHomepage();
   }
   
+  // this is the code that actually allows the pages to run
   if (screen == 1) {
 
     if (a1Button.mouse.presses()) {
@@ -224,15 +233,21 @@ function draw() {
     }
   } 
 
+  // go back to screen 0 if the back button is pressed
   if (backButton.mouse.presses()){
     showScreen0();
   }
 
+
+  // fixed bug; they kept rotating for no reason :(
   enterButton.rotation = 0;
   backButton.rotation = 0;
 
 }
 
+
+/* FUNCTION TO SHOW THE HOMEPAGE */
+// this is the page that shows up when you click on the back icon
 function showHomepage(){
   print("showing homepage");
   
@@ -288,12 +303,17 @@ function showHomepage(){
 
 
 
-
-
-
+// TODO: ADD MORE COMMENTS ABT SCREENS HERE
+// This is the main script for the 404 Path Not Found game.
 
 
 /* FUNCTIONS TO DISPLAY SCREENS */
+/*
+  In total there are 6 screens: screen 0 is the homepage,
+  screen 1 is the page you go to after enter button, 
+
+
+*/
 function showScreen0(){
   print("back to screen 0");
   
@@ -334,7 +354,8 @@ function showScreen0(){
   noFill();
 
       // CUSTOMIZATION FOR HOME SCREEN
-
+      // the small ryg icons in the top left corner
+      
       fill("#f0dcc0"); 
       rect(0, 0, 600, 40, 20, 20, 0, 0);
       fill("#b3342b");
