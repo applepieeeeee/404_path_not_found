@@ -46,7 +46,6 @@ function setup() {
   bgMusic.loop();
   textFont(font1);
 
-
   // Setup
   createCanvas(600, 400);
   textAlign(CENTER);
