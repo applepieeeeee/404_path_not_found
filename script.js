@@ -324,7 +324,6 @@ function showScreen0(){
       ellipse(60, 20, 20, 20);
       fill("#99c47aff");
       ellipse(90, 20, 20, 20);
-
 }
 
 function showScreen1(){
