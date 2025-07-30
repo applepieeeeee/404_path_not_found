@@ -1,6 +1,4 @@
-print("loaded");
-
-//Press a button to choose your path
+  //Press a button to choose your path
 //See the README file for more information
 
 /* VARIABLES */
@@ -8,7 +6,7 @@ let font1;
 
 // Sound and music variables
 // bgMusic is the background music that plays on all the screens
-let bgMusic;
+let bgMusic; 
 let isMuted = false;
 let soundOn;
 let musicButton;
@@ -16,15 +14,15 @@ let musicButton;
 // buttons for different screens
 // enterButton is the button on the home screen
 let enterButton; 
-
+  
 let a1Button;
 let a2Button;
 let b1Button;
 let b2Button;
 let backButton;
-
+    
 // screen variable to track which screen is displayed
-let screen = 0;
+let screen = 0;   
 
 // icons displayed on the home screen
 // ball, fish, cat, page, picker, star1, star2
