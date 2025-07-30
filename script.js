@@ -1,3 +1,6 @@
+console.log("loaded");
+
+
 //Press a button to choose your path
 //See the README file for more information
 
