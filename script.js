@@ -4,12 +4,15 @@
 /* VARIABLES */
 let font1;
 
+// Sound and music variables
+// bgMusic is the background music that plays on all the screens
 let bgMusic;
 let isMuted = false;
 let soundOn;
 let musicButton;
 
-
+// buttons for different screens
+// enterButton is the button on the home screen
 let enterButton;
 
 let a1Button;
@@ -18,8 +21,11 @@ let b1Button;
 let b2Button;
 let backButton;
 
+// screen variable to track which screen is displayed
 let screen = 0;
 
+// icons displayed on the home screen
+// ball, fish, cat, page, picker, star1, star2
 let ball;
 let fish;
 let cat;
@@ -28,13 +34,18 @@ let picker;
 let star1;
 let star2;
 
+// displayed on the virus screen
+// virus is the virus page icon that appears on screen 3
 let virus;
 
 let pointer;
 
+// profile page and back buttons
 let smiski;
-let backSmiski;
+let backSmiski; // note this is actually a fish icon now
 
+/* PRELOAD RUNS ONCE */
+// preload is used to load assets before the sketch starts
 function preload() {
   font1 = loadFont('FONTS/MYFONT.ttf');
   bgMusic = loadSound('MUSIC/background.mp3');
@@ -52,6 +63,7 @@ function setup() {
   textSize(20);
   noStroke();
   
+  // Create sprites for icons displayyed on the screen 0 
   ball = new Sprite();
   ball.img = loadImage('ICONS/BALL.png');
   ball.x = 160; 
