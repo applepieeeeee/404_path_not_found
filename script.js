@@ -1,15 +1,17 @@
 //Press a button to choose your path
 //See the README file for more information
 
+
 /* VARIABLES */
 let font1;
 
+// Music
 let bgMusic;
 let isMuted = false;
 let soundOn;
 let musicButton;
 
-
+// Buttons
 let enterButton;
 
 let a1Button;
@@ -19,6 +21,7 @@ let b2Button;
 
 let screen = 0;
 
+// Icons
 let ball;
 let fish;
 let cat;
@@ -90,6 +93,7 @@ function setup() {
   star2.visible = true;
 
 
+
   // // MUSIC BUTTON SPRITEEEE
   musicButton = new Sprite();
   musicButton.img = soundOn;
@@ -101,7 +105,7 @@ function setup() {
 
 
   // Set up the home screen
-  background("#fffff");
+  background("#fffff")
   fill("#769c8b");
   rect(0, 0, 600, 400, 20); 
 
@@ -117,6 +121,8 @@ function setup() {
   textFont(font1);
   noFill();
 
+
+
       // CUSTOMIZATION FOR HOME SCREEN
 
       fill("#f0dcc0"); 
@@ -129,6 +135,8 @@ function setup() {
       ellipse(90, 20, 20, 20);
 
 
+
+
   // Create buttons for all screens
   enterButton = new Sprite( width /  2 , height / 2 + 90);  
   a1Button = new Sprite( -200, -200);  
@@ -137,7 +145,6 @@ function setup() {
   b2Button = new Sprite( - 150, -150);
 
 }
-
 
 
 /* DRAW LOOP REPEATS */
@@ -360,9 +367,7 @@ function showScreen5(){
   // Move extra buttons off screen
   a1Button.pos = { x: -200, y: -200 };
   a2Button.pos = { x: -50, y: -50 };
-  
 }
-
 
 
 function drawTopBar() {
