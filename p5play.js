@@ -86,6 +86,7 @@ p5.prototype.registerMethod('init', function p5PlayInit() {
     else if (n == 'enneagon') l = [l, -40, 9];
     else if (n == 'decagon') l = [l, -36, 10];
     else if (n == 'hendecagon') l = [l, -32.7272727273, 11];
+  
     else if (n == 'dodecagon') l = [l, -30, 12];
     return l;
   }
