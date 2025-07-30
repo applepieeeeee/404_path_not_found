@@ -225,7 +225,7 @@ function draw() {
 function showHomepage(){
   print("showing homepage");
   
-  fill("#706e68");
+  fill("#7e7b74ff");
   rect(0, 0, 600, 400, 20); 
   drawTopBar();
 
@@ -362,13 +362,13 @@ function showScreen1(){
   a2Button.w = 120;
   a2Button.h = 40;
   a2Button.text = "quiet...";
-  a2Button.color = "#dbcede";
+  a2Button.color = "#d5c3daff";
 
 }
 
 function showScreen2(){  
 
-  fill("#a61e56");
+  fill("#981d50ff");
   rect(0, 0, 600, 400, 20); 
   drawTopBar();
 
