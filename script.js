@@ -229,7 +229,7 @@ function showHomepage(){
   rect(0, 0, 600, 400, 20); 
   drawTopBar();
 
-  
+
   ball.visible = false;
   fish.visible = false;
   cat.visible = false;
@@ -258,7 +258,7 @@ function showHomepage(){
   text("about me: clair w.", width/2, 90);
 
   strokeWeight(0);
-  textSize(12);
+  textSize(12); 
 
   strokeWeight(1);
   text("my fav programming \nlanguages...", 172, 150);
@@ -276,7 +276,6 @@ function showHomepage(){
 
 /* FUNCTIONS TO DISPLAY SCREENS */
 function showScreen0(){
-
   print("back to screen 0");
   
   // Set up the home screen
@@ -309,7 +308,7 @@ function showScreen0(){
   text("404 :( \nPATH NOT FOUND", 
        width / 2, height / 2 - 60);
   textSize(10);
-  text("you tried to visit your favorite online game. \nbut instead of loading, \nyour browswer started blinking. \nyou're... inside the internet?", width/2, height/2 + 10);
+  text("you tried to visit your favorite online game.\nbut instead of loading, \nyour browswer started blinking. \nyou're... inside the internet?", width/2, height/2 + 10);
 
   textSize(20);
   textFont(font1);
@@ -323,14 +322,14 @@ function showScreen0(){
       ellipse(30, 20, 20, 20);
       fill("#e3bf4b");
       ellipse(60, 20, 20, 20);
-      fill("#a6cf88");
+      fill("#99c47aff");
       ellipse(90, 20, 20, 20);
 
 }
 
 function showScreen1(){
 
-  fill("#071e42");
+  fill("#04214fff");
   rect(0, 0, 600, 400, 20); 
   drawTopBar();
 
