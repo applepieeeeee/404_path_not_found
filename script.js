@@ -13,7 +13,7 @@ let musicButton;
 
 // buttons for different screens
 // enterButton is the button on the home screen
-let enterButton;
+let enterButton; 
 
 let a1Button;
 let a2Button;
