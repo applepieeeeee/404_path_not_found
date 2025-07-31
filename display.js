@@ -43,6 +43,8 @@ function preload() {
 
 /* SETUP RUNS ONCE */
 function setup() {
+  getAudioContext().suspend(); 
+
   bgMusic.loop();
   textFont(font1);
 
@@ -214,6 +216,19 @@ function draw() {
   enterButton.rotation = 0;
   backButton.rotation = 0;
 
+}
+
+/* MUSIC FUNCS */
+function mousePressed() {
+  if (getAudioContext().state !== 'running') {
+    userStartAudio();
+  }
+}
+
+function touchStarted() {
+  if (getAudioContext().state !== 'running') {
+    userStartAudio();
+  }
 }
 
 function showHomepage(){
