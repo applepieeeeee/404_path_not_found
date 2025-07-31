@@ -99,7 +99,7 @@ function setup() {
 
   smiski = new Sprite();
   smiski.img = loadImage('ICONS/smiski.png');
-  smiski.x = width - 80;
+  smiski.x = width - 150;
   smiski.y = 200;
   smiski.collider = 'k';
   smiski.visible = true;
@@ -165,10 +165,10 @@ function draw() {
     screen = 1;
   }
 
-  textSize(30);
+  textSize(20);
   stroke(255);
   fill(255);
-  text("press to \nmute <3", 104, 190);
+  text("press to \nmute <3", 90, 290);
 
   if (musicButton.mouse.presses()) {
     isMuted = !isMuted;  
@@ -278,7 +278,7 @@ function showHomepage(){
   text("java, c++, js\n special shout-out: \nlatex", 344, 368);
   text("playing my oboe - math \ncoding - listening to music \npiano - traveling", 820, 440);
 
-  backButton.pos = { x: 120, y: 720 };
+  backButton.pos = { x: 160, y: 700 };
 
 }
 
@@ -342,11 +342,12 @@ function showScreen1(){
   rect(0, 0, 1200, 800, 40); 
   drawTopBar();
 
-  textSize(18);
+  textSize(30);
   stroke(255);
   fill(255);
-  text("you float into the digital \nvoid. two portals open: one has a \nbunch of flashy ads. the \nother one is eerily \nsilent. which path do you \nchoose?", 
-       width/2, height/2 - 140);
+  text("you float into the digital \nvoid. two portals open: one has a \nbunch of flashy ads. the \nother one is eerily \nsilent. which path do you \nchoose?",
+     width/2, height/2 - 140);
+
   enterButton.pos = {x: -500, y: -500};
 
   ball.visible = false;
@@ -381,8 +382,13 @@ function showScreen2(){
   rect(0, 0, 1200, 800, 40); 
   drawTopBar();
 
+
+  // Text customization
+  fill(255);
+  stroke(255);
+  textSize(30);
   text("pop-ups swarm you!\nyou swat them away.\n\n\n\na download bar appears.", 
-       width / 2, height / 2 - 360);
+       width / 2, height / 2 - 200);
 
   ball.visible = false;
   fish.visible = false;
@@ -418,6 +424,10 @@ function showScreen3() {
   rect(0, 0, 1200, 800, 40); 
   drawTopBar();
 
+  // Text customization
+  textSize(30);
+  stroke(255);
+  fill(255);
   text("you installed 'SystemCleaner.EXE'.\nyour screen fades to black...\n\n\n\n\n\n\n\n\n\n", 
     width / 2, height / 2 - 130);
   text("\n\n\n\n\n\n\nyou’ve been logged out — forever.", width / 2, height / 2);
@@ -430,7 +440,7 @@ function showScreen3() {
   star1.visible = false;
   star2.visible = false;
 
-  backButton.pos = { x: 120, y: 720 };
+  backButton.pos = { x: 160, y: 700 };
 
   // Move extra buttons off screen
   b1Button.pos = { x: -500, y: -500 };
@@ -443,6 +453,10 @@ function showScreen4() {
   rect(0, 0, 1200, 800, 40); 
   drawTopBar();
 
+  // Text customization
+  textSize(30);
+  stroke(255);
+  fill(255);
   text("Virus scan complete!\nSpyware blocked.\n\n\n\nyou find a secret admin node.", width / 2, height / 2 - 120);
   text("you escape the pop-up maze.", width / 2, height / 2);
 
@@ -458,7 +472,7 @@ function showScreen4() {
   b1Button.pos = { x: -500, y: -500 };
   b2Button.pos = { x: -500, y: -500 };
 
-  backButton.pos = { x: 120, y: 720 };
+  backButton.pos = { x: 160, y: 700 };
 }
 
 function showScreen5(){
@@ -467,6 +481,10 @@ function showScreen5(){
   rect(0, 0, 1200, 800, 40); 
   drawTopBar();
 
+  // Text customization
+  textSize(30);
+  stroke(255);
+  fill(255);
   text("you enter a forgotten forum from 2003.\na lone internet moderator responds...", width / 2, height / 2 - 120);
   text("\n\n\n\nSTRANGE ENDING: you’re free...  for now.", width / 2, height / 2);
 
@@ -482,7 +500,7 @@ function showScreen5(){
   a1Button.pos = { x: -500, y: -500 };
   a2Button.pos = { x: -500, y: -500 };
 
-  backButton.pos = { x: 120, y: 720 };
+  backButton.pos = { x: 160, y: 700 };
 
 }
 
