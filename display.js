@@ -24,7 +24,6 @@ let ball;
 let fish;
 let cat;
 let page;
-let picker;
 let star1;
 let star2;
 
