@@ -316,7 +316,6 @@ function showScreen0(){
   b2Button.pos = { x: -500, y: -500};
   backButton.pos = {x: -500, y: -500};
 
-
   fill(255);
   textFont(font1);
   textSize(80);
