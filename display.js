@@ -9,7 +9,6 @@ let isMuted = false;
 let soundOn;
 let musicButton;
 
-
 let enterButton;
 
 let a1Button;
@@ -54,6 +53,8 @@ function setup() {
   textSize(40);
   noStroke();
 
+
+  // Load images and create sprites
   ball = new Sprite();
   ball.img = loadImage('ICONS/BALL.png');
   ball.x = 200; 
@@ -105,7 +106,7 @@ function setup() {
   smiski.visible = true;
 
 
-  // // MUSIC BUTTON SPRITEEEE
+  // MUSIC BUTTON SPRITEE
   musicButton = new Sprite();
   musicButton.img = soundOn;
   musicButton.x = 0;
@@ -133,6 +134,7 @@ function setup() {
 
 /* DRAW LOOP REPEATS */
 function draw() {
+  // Rotates the vinyl icon
   if (!isMuted){
     musicButton.rotation += 1;
   }
@@ -231,6 +233,8 @@ function touchStarted() {
 }
 
 
+// This function shows the homepage with information about meeeeee
+// It is called when you click on the smiski icon
 function showHomepage(){
   print("showing homepage");
 
@@ -283,6 +287,8 @@ function showHomepage(){
 }
 
 /* FUNCTIONS TO DISPLAY SCREENS */
+// This function sets up the home screen
+// It is called when the page loads or when you press the back button
 function showScreen0(){
   print("back to screen 0");
 
@@ -336,6 +342,8 @@ function showScreen0(){
 
 }
 
+// If you press the enter button, it will take you to the first screen
+// This is the first screen where you choose between two portals
 function showScreen1(){
 
   fill("#04214fff");
@@ -376,12 +384,13 @@ function showScreen1(){
 
 }
 
+// If you choose the flashy ad portal, it will take you to screen 2
+// Button A1
 function showScreen2(){  
 
   fill("#981d50ff");
   rect(0, 0, 1200, 800, 40); 
   drawTopBar();
-
 
   // Text customization
   fill(255);
@@ -418,6 +427,9 @@ function showScreen2(){
 
 }
 
+
+// If you choose to download the file, it will take you to screen 3
+// Button B1
 function showScreen3() {
 
   fill("#4b2d61");
@@ -447,6 +459,8 @@ function showScreen3() {
   b2Button.pos = { x: -500, y: -500 };
 }
 
+// If you choose to run the virus scan, it will take you to screen 4
+// Button B2
 function showScreen4() {
 
   fill("#3a4536");
@@ -475,6 +489,8 @@ function showScreen4() {
   backButton.pos = { x: 160, y: 700 };
 }
 
+// If you choose the quiet tunnel, it will take you to screen 5
+// Button A2
 function showScreen5(){
 
   fill("#85160c");
@@ -516,5 +532,4 @@ function drawTopBar() {
   ellipse(120, 40, 40, 40); 
   fill("#a6cf88");
   ellipse(180, 40, 40, 40); 
-  
 }
