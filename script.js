@@ -36,7 +36,6 @@ let picker;
 let star1;
 let star2;
 
-
 // displayed on the virus screen                                           
 // virus is the virus page icon that appears on screen 3
 let virus;
@@ -54,7 +53,6 @@ function preload() {
   bgMusic = loadSound('MUSIC/background.mp3');
   soundOn = loadImage('ICONS/SOUNDON.png');
 }
-
 
 /* SETUP RUNS ONCE */
 function setup() {
@@ -368,19 +366,18 @@ function showScreen0(){
       fill("#b3342b");
       ellipse(30, 20, 20, 20);
       fill("#e3bf4b");
-      ellipse(60, 20, 20, 20);
+      ellipse(60, 20, 20, 20); 
       fill("#99c47aff");
       ellipse(90, 20, 20, 20);
 }
 
 function showScreen1(){
-
   fill("#04214fff");
-  rect(0, 0, 600, 400, 20); 
-  drawTopBar();
-
+  rect(0, 0, 600, 400, 20);    
+  drawTopBar();   
+ 
   textSize(18);
-  stroke(255);
+  stroke(255); 
   fill(255);
   text("you float into the digital \nvoid. two portals open: one has a \nbunch of flashy ads. the \nother one is eerily \nsilent. which path do you \nchoose?", 
        width/2, height/2 - 70);
@@ -396,9 +393,10 @@ function showScreen1(){
 
   smiski.visible = false;
 
+
   // Button 1: Flashy Ad Portal
   a1Button.pos = { x: width / 2 - 90, y: height / 2 + 100 };
-  a1Button.w = 120;
+  a1Button.w = 120; 
   a1Button.h = 40;
   a1Button.text = "ad portal";
   a1Button.color = "#b89e9c";
@@ -535,5 +533,5 @@ function drawTopBar() {
   fill("#e3bf4b");
   ellipse(60, 20, 20, 20);  // yellow
   fill("#a6cf88");
-  ellipse(90, 20, 20, 20);  // green
-}
+  ellipse(90, 20, 20, 20);  // green 
+} 
