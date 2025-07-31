@@ -215,7 +215,6 @@ function draw() {
 
   enterButton.rotation = 0;
   backButton.rotation = 0;
-
 }
 
 
