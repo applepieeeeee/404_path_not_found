@@ -22,6 +22,7 @@ let screen = 0;
 
 let ball;
 let fish;
+let fish2;
 let cat;
 let page;
 let star1;
@@ -64,6 +65,12 @@ function setup() {
   fish.x = 460; 
   fish.y = 250; 
   fish.visible = true;
+
+  fish2 = new Sprite();
+  fish2.img = loadImage('ICONS/fish.png');
+  fish2.x = 490; 
+  fish2.y = 280; 
+  fish2.visible = true;
 
   cat = new Sprite();
   cat.img = loadImage('ICONS/cat.png');
@@ -234,6 +241,7 @@ function showHomepage(){
 
   ball.visible = false;
   fish.visible = false;
+  fish2.visible = false;
   cat.visible = false;
   page.visible = false;
   star1.visible = false;
@@ -285,6 +293,7 @@ function showScreen0(){
 
   ball.visible = true;
   fish.visible = true;
+  fish2.visible = true;
   cat.visible = true;
   page.visible = true;
   star1.visible = true;
@@ -339,6 +348,7 @@ function showScreen1(){
 
   ball.visible = false;
   fish.visible = false;
+  fish2.visible = false;
   cat.visible = false;
   page.visible = false;
   star1.visible = false;
@@ -373,6 +383,7 @@ function showScreen2(){
 
   ball.visible = false;
   fish.visible = false;
+  fish2.visible = false;
   cat.visible = false;
   page.visible = false;
   star1.visible = false;
@@ -409,6 +420,7 @@ function showScreen3() {
 
   ball.visible = false;
   fish.visible = false;
+  fish2.visible = false;
   cat.visible = false;
   page.visible = false;
   star1.visible = false;
@@ -432,6 +444,7 @@ function showScreen4() {
 
   ball.visible = false;
   fish.visible = false;
+  fish2.visible = false;
   cat.visible = false;
   page.visible = false;
   star1.visible = false;
@@ -455,6 +468,7 @@ function showScreen5(){
 
   ball.visible = false;
   fish.visible = false;
+  fish2.visible = false;
   cat.visible = false;
   page.visible = false;
   star1.visible = false;
