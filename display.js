@@ -28,7 +28,6 @@ let picker;
 let star1;
 let star2;
 
-let virus;
 
 let pointer;
 
@@ -91,12 +90,6 @@ function setup() {
   star2.x = 140; 
   star2.y = 270; 
   star2.visible = true;
-
-  virus = new Sprite();
-  virus.img = loadImage('ICONS/virus.png');
-  virus.x = width/2; 
-  virus.y = 270; 
-  virus.visible = false;
 
   smiski = new Sprite();
   smiski.img = loadImage('ICONS/smiski.png');
@@ -304,7 +297,6 @@ function showScreen0(){
   a2Button.pos = { x: -100, y: -100};
   b1Button.pos = { x: -100, y: -100};
   b2Button.pos = { x: -100, y: -100};
-  virus.pos = { x: -100, y: -100};
   backButton.pos = {x: -100, y: -100};
 
 
@@ -412,7 +404,6 @@ function showScreen3() {
   fill("#4b2d61");
   rect(0, 0, 600, 400, 20); 
   drawTopBar();
-  virus.visible = true;
 
   text("you installed 'SystemCleaner.EXE'.\nyour screen fades to black...\n\n\n\n\n\n\n\n\n\n", width / 2, height / 2 - 65);
   text("\n\n\n\n\n\n\nyou’ve been logged out — forever.", width / 2, height / 2);
