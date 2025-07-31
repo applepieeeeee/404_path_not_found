@@ -3,6 +3,7 @@
 
 /* VARIABLES */
 
+
 let font1; // monospace font used throughout the game
 
 
