@@ -300,7 +300,6 @@ function showScreen0(){
   star2.visible = true;
   smiski.visible = true;
 
-
   enterButton.pos = { x: width / 2, y: height / 2 + 90 };
   a1Button.pos = { x: -100, y: -100};
   a2Button.pos = { x: -100, y: -100};
