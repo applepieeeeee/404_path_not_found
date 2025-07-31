@@ -250,7 +250,7 @@ function showHomepage(){
   enterButton.pos = {x: -200, y: -200};
 
 
-  stroke("faf7ed");
+  stroke("#faf7ed");
   fill("#6c7d59");
   rect(90, 130, 160, 100, 20);
 
@@ -289,7 +289,7 @@ function showScreen0(){
 
   // Set up the home screen
   background("#fffff");
-  fill("#769c8b");
+  fill("#678377ff");
   rect(0, 0, 600, 400, 20); 
 
   ball.visible = true;
