@@ -323,7 +323,7 @@ function showScreen0(){
   print("back to screen 0");
   
   // Set up the home screen
-  background("#fffff");
+  background("#ffffff");
   fill("#769c8b");
   rect(0, 0, 600, 400, 20); 
 
