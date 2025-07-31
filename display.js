@@ -323,7 +323,8 @@ function showScreen0(){
   text("404 :( \nPATH NOT FOUND", 
        width / 2, height / 2 - 120);
   textSize(20);
-  text("you tried to visit your favorite online game.\nbut instead of loading, \nyour browswer started blinking. \nyou're... inside the internet?", width/2, height/2 + 10);
+  text("you tried to visit your favorite online game.\nbut instead of loading, \nyour browswer started blinking. \nyou're... inside the internet?", 
+    width/2, height/2 + 20);
 
   textSize(40);
   textFont(font1);
