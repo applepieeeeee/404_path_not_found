@@ -218,6 +218,7 @@ function draw() {
 
 }
 
+
 /* MUSIC FUNCS */
 function mousePressed() {
   if (getAudioContext().state !== 'running') {
@@ -230,6 +231,7 @@ function touchStarted() {
     userStartAudio();
   }
 }
+
 
 function showHomepage(){
   print("showing homepage");
