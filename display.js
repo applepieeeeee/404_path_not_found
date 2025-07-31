@@ -216,6 +216,11 @@ function draw() {
 
   enterButton.rotation = 0;
   backButton.rotation = 0;
+  a1Button.rotation = 0;
+  b1Button.rotation = 0;
+  a2Button.rotation = 0;
+  b2Button.rotation = 0;
+  
 }
 
 
