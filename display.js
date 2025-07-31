@@ -1,34 +1,25 @@
-  //Press a button to choose your path
+//Press a button to choose your path
 //See the README file for more information
 
 /* VARIABLES */
+let font1;
 
-
-let font1; // monospace font used throughout the game
-
-
-// Sound and music variables 
-// bgMusic is the background music that plays on all the screens
-let bgMusic; 
+let bgMusic;
 let isMuted = false;
 let soundOn;
 let musicButton;
 
-// buttons for different screens
-// enterButton is the button on the home screen
-let enterButton; 
+
+let enterButton;
 
 let a1Button;
 let a2Button;
-let b1Button; 
+let b1Button;
 let b2Button;
 let backButton;
-    
-// screen variable to track which screen is displayed
-let screen = 0;   
 
-// icons displayed on the home screen
-// ball, fish, cat, page, picker, star1, star2
+let screen = 0;
+
 let ball;
 let fish;
 let cat;
@@ -37,18 +28,13 @@ let picker;
 let star1;
 let star2;
 
-// displayed on the virus screen                                           
-// virus is the virus page icon that appears on screen 3
 let virus;
+
 let pointer;
 
-// profile page and back buttons
 let smiski;
-let backSmiski; // note this is actually a fish icon now
+let backSmiski;
 
-
-/* PRELOAD RUNS ONCE */
-// preload is used to load assets before the sketch starts
 function preload() {
   font1 = loadFont('FONTS/MYFONT.ttf');
   bgMusic = loadSound('MUSIC/background.mp3');
@@ -60,15 +46,13 @@ function setup() {
   bgMusic.loop();
   textFont(font1);
 
+
   // Setup
   createCanvas(600, 400);
   textAlign(CENTER);
-  rectMode(CENTER);
-  imageMode(CENTER);
   textSize(20);
   noStroke();
-  
-  // Create sprites for icons displayyed on the screen 0 
+
   ball = new Sprite();
   ball.img = loadImage('ICONS/BALL.png');
   ball.x = 160; 
@@ -92,13 +76,7 @@ function setup() {
   page.x = 110; 
   page.y = 350; 
   page.visible = true;
-  page.rotation = 16; 
-
-  picker = new Sprite();
-  picker.img = loadImage('ICONS/picker.png');
-  picker.x = 570; 
-  picker.y = 380; 
-  picker.visible = true;
+  page.rotation = 16;
 
   star1 = new Sprite();
   star1.img = loadImage('ICONS/star1.png');
@@ -112,8 +90,6 @@ function setup() {
   star2.y = 270; 
   star2.visible = true;
 
-
-  // Buttons not on home screen (screen 0)
   virus = new Sprite();
   virus.img = loadImage('ICONS/virus.png');
   virus.x = width/2; 
@@ -127,7 +103,7 @@ function setup() {
   smiski.collider = 'k';
   smiski.visible = true;
 
-  
+
   // // MUSIC BUTTON SPRITEEEE
   musicButton = new Sprite();
   musicButton.img = soundOn;
@@ -143,7 +119,7 @@ function setup() {
   a2Button = new Sprite( -200, -200);
   b1Button = new Sprite( - 100, -100);
   b2Button = new Sprite( - 150, -150);
-  
+
   backButton = new Sprite(-100, -100);
   backButton.rotation = 0;
   backButton.img = loadImage('ICONS/back.png');
@@ -156,12 +132,10 @@ function setup() {
 
 /* DRAW LOOP REPEATS */
 function draw() {
-
-  // this makes sure the record is always rotating
   if (!isMuted){
     musicButton.rotation += 1;
   }
-  
+
   // Display enter button
   enterButton.w = 100;
   enterButton.h = 50;
@@ -181,7 +155,6 @@ function draw() {
   a2Button.text = "quiet...";
   a2Button.color = "#dbcede";
 
-  // so that the text is black
   fill(0);
 
   // Check enter button
@@ -196,7 +169,6 @@ function draw() {
   fill(255);
   text("press to \nmute <3", 52, 95);
 
-  // pauses music if the music button is pressed
   if (musicButton.mouse.presses()) {
     isMuted = !isMuted;  
 
@@ -207,13 +179,12 @@ function draw() {
     }
   }
 
-  // displays the homepage if you click on the smiski icon
   if ( smiski.mouse.presses() ){
     showHomepage();
   }
-  
-  // this is the code that actually allows the pages to run
+
   if (screen == 1) {
+
     if (a1Button.mouse.presses()) {
       print("Display screen 2");
       showScreen2();
@@ -236,26 +207,18 @@ function draw() {
     }
   } 
 
-
-  // go back to screen 0 if the back button is pressed
   if (backButton.mouse.presses()){
     showScreen0();
   }
 
-
-  // fixed bug; they kept rotating for no reason :(
   enterButton.rotation = 0;
   backButton.rotation = 0;
 
-
 }
 
-
-/* FUNCTION TO SHOW THE HOMEPAGE */
-// this is the page that shows up when you click on the back icon
 function showHomepage(){
   print("showing homepage");
-  
+
   fill("#7e7b74ff");
   rect(0, 0, 600, 400, 20); 
   drawTopBar();
@@ -265,12 +228,11 @@ function showHomepage(){
   fish.visible = false;
   cat.visible = false;
   page.visible = false;
-  picker.visible = false;
   star1.visible = false;
   star2.visible = false;
 
   enterButton.pos = {x: -200, y: -200};
-  
+
 
   stroke("faf7ed");
   fill("#6c7d59");
@@ -281,7 +243,7 @@ function showHomepage(){
 
   fill("#6c7d59");
   rect(297, 170, 220, 110, 20);
-  
+
   strokeWeight(2);
   stroke("#faf7ed");
   fill("#faf7ed");
@@ -301,30 +263,16 @@ function showHomepage(){
   text("playing my oboe - math \ncoding - listening to music \npiano - traveling", 410, 220);
 
   backButton.pos = { x: 60, y: 360 };
-  
+
 }
 
 
-
-
-
-// TODO: ADD MORE COMMENTS ABT SCREENS HERE
-// This is the main script for the 404 Path Not Found game.
-
-
 /* FUNCTIONS TO DISPLAY SCREENS */
-/*
-
-  In total there are 6 screens: screen 0 is the homepage,
-  screen 1 is the page you go to after enter button, 
-
-
-*/
 function showScreen0(){
   print("back to screen 0");
-  
+
   // Set up the home screen
-  background("#ffffff");
+  background("#fffff");
   fill("#769c8b");
   rect(0, 0, 600, 400, 20); 
 
@@ -332,12 +280,11 @@ function showScreen0(){
   fish.visible = true;
   cat.visible = true;
   page.visible = true;
-  picker.visible = true;
   star1.visible = true;
   star2.visible = true;
   smiski.visible = true;
 
-  
+
   enterButton.pos = { x: width / 2, y: height / 2 + 90 };
   a1Button.pos = { x: -100, y: -100};
   a2Button.pos = { x: -100, y: -100};
@@ -360,25 +307,26 @@ function showScreen0(){
   noFill();
 
       // CUSTOMIZATION FOR HOME SCREEN
-      // the small ryg icons in the top left corner
-      
+
       fill("#f0dcc0"); 
       rect(0, 0, 600, 40, 20, 20, 0, 0);
       fill("#b3342b");
       ellipse(30, 20, 20, 20);
       fill("#e3bf4b");
-      ellipse(60, 20, 20, 20); 
+      ellipse(60, 20, 20, 20);
       fill("#99c47aff");
       ellipse(90, 20, 20, 20);
+
 }
 
 function showScreen1(){
+
   fill("#04214fff");
-  rect(0, 0, 600, 400, 20);    
-  drawTopBar();   
- 
+  rect(0, 0, 600, 400, 20); 
+  drawTopBar();
+
   textSize(18);
-  stroke(255); 
+  stroke(255);
   fill(255);
   text("you float into the digital \nvoid. two portals open: one has a \nbunch of flashy ads. the \nother one is eerily \nsilent. which path do you \nchoose?", 
        width/2, height/2 - 70);
@@ -388,16 +336,14 @@ function showScreen1(){
   fish.visible = false;
   cat.visible = false;
   page.visible = false;
-  picker.visible = false;
   star1.visible = false;
   star2.visible = false;
 
   smiski.visible = false;
 
-
   // Button 1: Flashy Ad Portal
   a1Button.pos = { x: width / 2 - 90, y: height / 2 + 100 };
-  a1Button.w = 120; 
+  a1Button.w = 120;
   a1Button.h = 40;
   a1Button.text = "ad portal";
   a1Button.color = "#b89e9c";
@@ -413,7 +359,7 @@ function showScreen1(){
 
 function showScreen2(){  
 
-  fill("#9a2455ff");
+  fill("#981d50ff");
   rect(0, 0, 600, 400, 20); 
   drawTopBar();
 
@@ -424,10 +370,9 @@ function showScreen2(){
   fish.visible = false;
   cat.visible = false;
   page.visible = false;
-  picker.visible = false;
   star1.visible = false;
   star2.visible = false;
-  
+
   // Move extra buttons off screen
   a1Button.pos = { x: -200, y: -200 };
   a2Button.pos = { x: -50, y: -50 };
@@ -453,6 +398,7 @@ function showScreen3() {
   fill("#4b2d61");
   rect(0, 0, 600, 400, 20); 
   drawTopBar();
+  virus.visible = true;
 
   text("you installed 'SystemCleaner.EXE'.\nyour screen fades to black...\n\n\n\n\n\n\n\n\n\n", width / 2, height / 2 - 65);
   text("\n\n\n\n\n\n\nyou’ve been logged out — forever.", width / 2, height / 2);
@@ -461,14 +407,11 @@ function showScreen3() {
   fish.visible = false;
   cat.visible = false;
   page.visible = false;
-  picker.visible = false;
   star1.visible = false;
   star2.visible = false;
-  
-  virus.visible = true;
 
   backButton.pos = { x: 60, y: 360 };
-  
+
   // Move extra buttons off screen
   b1Button.pos = { x: -100, y: -100 };
   b2Button.pos = { x: -150, y: -150 };
@@ -487,7 +430,6 @@ function showScreen4() {
   fish.visible = false;
   cat.visible = false;
   page.visible = false;
-  picker.visible = false;
   star1.visible = false;
   star2.visible = false;
 
@@ -511,7 +453,6 @@ function showScreen5(){
   fish.visible = false;
   cat.visible = false;
   page.visible = false;
-  picker.visible = false;
   star1.visible = false;
   star2.visible = false;
 
@@ -522,6 +463,8 @@ function showScreen5(){
   backButton.pos = { x: 60, y: 360 };
 
 }
+
+
 
 function drawTopBar() {
   // Rounded top bar
@@ -534,5 +477,5 @@ function drawTopBar() {
   fill("#e3bf4b");
   ellipse(60, 20, 20, 20);  // yellow
   fill("#a6cf88");
-  ellipse(90, 20, 20, 20);  // green 
-} 
+  ellipse(90, 20, 20, 20);  // green
+}
