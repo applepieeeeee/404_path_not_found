@@ -20,8 +20,11 @@ let backButton;
 let screen = 0;
 
 let ball;
+
 let fish;
 let fish2;
+let fish3;
+
 let cat;
 let page;
 let star1;
@@ -57,8 +60,8 @@ function setup() {
   // Load images and create sprites
   ball = new Sprite();
   ball.img = loadImage('ICONS/BALL.png');
-  ball.x = 200; 
-  ball.y = 200; 
+  ball.x = 220; 
+  ball.y = 240; 
   ball.visible = true;
 
   fish = new Sprite();
@@ -66,12 +69,21 @@ function setup() {
   fish.x = 920; 
   fish.y = 500; 
   fish.visible = true;
+  fish.rotation = 0;
 
   fish2 = new Sprite();
   fish2.img = loadImage('ICONS/fish.png');
   fish2.x = 980; 
   fish2.y = 560; 
   fish2.visible = true;
+  fish2.rotation = 0;
+
+  fish3 = new Sprite();
+  fish3.img = loadImage('ICONS/fish.png');
+  fish3.x = 960; 
+  fish3.y = 515; 
+  fish3.visible = true;
+  fish3.rotation = 0;
 
   cat = new Sprite();
   cat.img = loadImage('ICONS/cat.png');
@@ -109,7 +121,7 @@ function setup() {
   // MUSIC BUTTON SPRITEE
   musicButton = new Sprite();
   musicButton.img = soundOn;
-  musicButton.x = 0;
+  musicButton.x = -1;
   musicButton.y = height/2;
   musicButton.w = 200;  
   musicButton.h = 200; 
@@ -170,7 +182,7 @@ function draw() {
   textSize(20);
   stroke(255);
   fill(255);
-  text("press to \nmute <3", 90, 290);
+  text("press to \nmute <3", 90, 190);
 
   if (musicButton.mouse.presses()) {
     isMuted = !isMuted;  
@@ -249,13 +261,13 @@ function showHomepage(){
   ball.visible = false;
   fish.visible = false;
   fish2.visible = false;
+  fish3.visible = false;
   cat.visible = false;
   page.visible = false;
   star1.visible = false;
   star2.visible = false;
 
   enterButton.pos = {x: -400, y: -400};
-
 
   stroke("#faf7ed");
   fill("#6c7d59");
@@ -303,6 +315,7 @@ function showScreen0(){
   ball.visible = true;
   fish.visible = true;
   fish2.visible = true;
+  fish3.visible = true;
   cat.visible = true;
   page.visible = true;
   star1.visible = true;
@@ -316,6 +329,9 @@ function showScreen0(){
   b2Button.pos = { x: -500, y: -500};
   backButton.pos = {x: -500, y: -500};
 
+  fill("#bbb09fff"); 
+  rect(width / 2 - 200, 95, 400, 40, 20); 
+  
   fill(255);
   textFont(font1);
   textSize(80);
@@ -324,6 +340,9 @@ function showScreen0(){
   textSize(20);
   text("you tried to visit your favorite online game.\nbut instead of loading, \nyour browswer started blinking. \nyou're... inside the internet?", 
     width/2, height/2 + 20);
+
+  textSize(15);
+  text("psa: click anywhere to start the music", width/2, height/2 - 280);
 
   textSize(40);
   textFont(font1);
@@ -364,6 +383,7 @@ function showScreen1(){
   ball.visible = false;
   fish.visible = false;
   fish2.visible = false;
+  fish3.visible = false;
   cat.visible = false;
   page.visible = false;
   star1.visible = false;
@@ -405,6 +425,7 @@ function showScreen2(){
   ball.visible = false;
   fish.visible = false;
   fish2.visible = false;
+  fish3.visible = false;
   cat.visible = false;
   page.visible = false;
   star1.visible = false;
@@ -450,6 +471,7 @@ function showScreen3() {
   ball.visible = false;
   fish.visible = false;
   fish2.visible = false;
+  fish3.visible = false;
   cat.visible = false;
   page.visible = false;
   star1.visible = false;
@@ -480,6 +502,7 @@ function showScreen4() {
   ball.visible = false;
   fish.visible = false;
   fish2.visible = false;
+  fish3.visible = false;
   cat.visible = false;
   page.visible = false;
   star1.visible = false;
@@ -510,6 +533,7 @@ function showScreen5(){
   ball.visible = false;
   fish.visible = false;
   fish2.visible = false;
+  fish3.visible = false;
   cat.visible = false;
   page.visible = false;
   star1.visible = false;
