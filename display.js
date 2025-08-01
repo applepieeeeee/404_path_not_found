@@ -31,6 +31,7 @@ let star1;
 let star2;
 
 let dice;
+let colorpicker;
 
 let pointer;
 
@@ -53,6 +54,14 @@ function setup() {
 
   // Setup
   createCanvas(1200, 800);
+  
+  colorpicker = new Sprite();
+  colorpicker.img = loadImage('ICONS/colorpicker.png');
+  colorpicker.x =  width - 100;
+  colorpicker.y = height - 220;
+  colorpicker.collider = 'k';
+  colorpicker.visible = true; 
+  
   textAlign(CENTER);
   textSize(40);
   noStroke();
@@ -125,11 +134,12 @@ function setup() {
   dice.collider = 'k';
   dice.visible = true; 
 
+
   // MUSIC BUTTON SPRITEE
   musicButton = new Sprite();
   musicButton.img = soundOn;
   musicButton.x = -1;
-  musicButton.y = height/2;
+  musicButton.y = height/2 + 40;
   musicButton.w = 200;  
   musicButton.h = 200; 
   musicButton.collider = 'k';
@@ -160,7 +170,7 @@ function draw() {
 
   // Display enter button
   enterButton.w = 200;
-  enterButton.h = 100;
+  enterButton.h = 70;
   enterButton.collider = "k";
   enterButton.color = "#e8c76b";
   enterButton.text = "enter";
@@ -256,6 +266,10 @@ function touchStarted() {
 }
 
 
+
+
+
+
 // This function shows the homepage with information about meeeeee
 // It is called when you click on the smiski icon
 function showHomepage(){
@@ -270,11 +284,13 @@ function showHomepage(){
   fish.visible = false;
   fish2.visible = false;
   fish3.visible = false;
+
   cat.visible = false;
   page.visible = false;
   star1.visible = false;
   star2.visible = false;
   dice.visible = false;
+  colorpicker.visible = false;
 
   enterButton.pos = {x: -400, y: -400};
 
@@ -310,6 +326,10 @@ function showHomepage(){
 
 }
 
+
+
+
+
 /* FUNCTIONS TO DISPLAY SCREENS */
 // This function sets up the home screen
 // It is called when the page loads or when you press the back button
@@ -325,14 +345,16 @@ function showScreen0(){
   fish.visible = true;
   fish2.visible = true;
   fish3.visible = true;
+
   cat.visible = true;
   page.visible = true;
   star1.visible = true;
   star2.visible = true;
   smiski.visible = true;
   dice.visible = true;
+  colorpicker.visible = true;
 
-  enterButton.pos = { x: width / 2, y: height / 2 + 180 };
+  enterButton.pos = { x: width / 2, y: height / 2 + 170 };
   a1Button.pos = { x: -500, y: -500};
   a2Button.pos = { x: -500, y: -500};
   b1Button.pos = { x: -500, y: -500};
@@ -399,6 +421,7 @@ function showScreen1(){
   star1.visible = false;
   star2.visible = false;
   dice.visible = false;
+  colorpicker.visible = false;
 
   smiski.visible = false;
 
@@ -442,6 +465,7 @@ function showScreen2(){
   star1.visible = false;
   star2.visible = false;
   dice.visible = false;
+  colorpicker.visible = false;
 
   // Move extra buttons off screen
   a1Button.pos = { x: -500, y: -500 };
@@ -489,6 +513,7 @@ function showScreen3() {
   star1.visible = false;
   star2.visible = false;
   dice.visible = false;
+  colorpicker.visible = false;
 
   backButton.pos = { x: 160, y: 700 };
 
@@ -521,6 +546,7 @@ function showScreen4() {
   star1.visible = false;
   star2.visible = false;
   dice.visible = false;
+  colorpicker.visible = false;
 
   // Move extra buttons off screen
   b1Button.pos = { x: -500, y: -500 };
@@ -553,6 +579,7 @@ function showScreen5(){
   star1.visible = false;
   star2.visible = false;
   dice.visible = false;
+  colorpicker.visible = false;
 
   // Move extra buttons off screen
   a1Button.pos = { x: -500, y: -500 };

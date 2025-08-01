@@ -4,7 +4,7 @@
 ### i made this project on replit, then pushed it to github
 ### i started this project with the gwc sip this summer! 
 
-# image credits!
+# image credits! ~ most taken from pinterest, credits to respective owners
 ##### back button fish icon: https://www.pinterest.com/pin/4644405858994676
 ##### smiski profile page button: https://www.pinterest.com/pin/2040762328621308
 ##### star icon: https://www.pinterest.com/pin/426645764719484804
@@ -14,6 +14,9 @@
 ##### goldfish icon: https://www.pinterest.com/pin/2392606047810607
 ##### 8 ball icon: https://www.pinterest.com/pin/1073686367418112259
 ##### dice icon: https://www.pinterest.com/pin/211174978358408/
+##### color picker icon: https://www.pinterest.com/pin/712835447264764039/
+##### vinyl: PJ Harvey's "Uh Huh Her"
+
 
 
 [![Athena Award Badge](https://img.shields.io/endpoint?url=https%3A%2F%2Faward.athena.hackclub.com%2Fapi%2Fbadge)](https://award.athena.hackclub.com?utm_source=readme)
