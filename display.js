@@ -351,6 +351,7 @@ function showHomepage() {
 
 
   stroke("#faf7ed");
+  strokeWeight(1);
   fill("#6c7d59");
   rect(180, 260, 320, 200, 40);
 
