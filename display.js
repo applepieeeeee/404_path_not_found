@@ -50,7 +50,7 @@ function preload() {
 
 /* SETUP RUNS ONCE */
 function setup() {
-  getAudioContext().suspend();
+  // getAudioContext().suspend();
 
   bgMusic.loop();
   textFont(font1);
@@ -451,7 +451,7 @@ function showScreen0() {
   };
 
   fill("#bbb09fff");
-  rect(width / 2 - 200, 95, 400, 40, 20);
+  rect(width / 2 - 250, 95, 500, 40, 20);
 
   fill(255);
   textFont(font1);
@@ -463,7 +463,7 @@ function showScreen0() {
     width / 2, height / 2 + 20);
 
   textSize(15);
-  text("psa: click anywhere to start the music", width / 2, height / 2 - 280);
+  text("psa: click anywhere to start the music if not loading", width / 2, height / 2 - 280);
 
   textSize(40);
   textFont(font1);
