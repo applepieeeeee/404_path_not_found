@@ -1,4 +1,5 @@
 // display.js
+
 //Press a button to choose your path
 //See the README file for more information
 
@@ -283,7 +284,6 @@ function draw() {
 }
 
 
-
 /* MUSIC FUNCS */
 function mousePressed() {
   if (getAudioContext().state !== 'running') {
@@ -385,7 +385,6 @@ function showHomepage() {
   };
 
 }
-
 
 
 /* FUNCTIONS TO DISPLAY SCREENS */
@@ -502,8 +501,6 @@ function showScreen1() {
     noStroke();
     ellipse(x, y, r, r);
   }
-
-
 
   textSize(30);
   stroke(255);
@@ -800,7 +797,7 @@ function showScreen5() {
 
 }
 
-// Screen 6: The Admin Node's Secret (from Screen 4: Explore Node)
+// Screen 6: The admin mode (from Screen 4: Explore Node)
 function showScreen6() {
   fill("#1f295eff");
   rect(0, 0, 1200, 800, 40);
@@ -809,7 +806,7 @@ function showScreen6() {
   textSize(30);
   stroke(255);
   fill(255);
-  text("the admin node is exploding with ancient data.\nyou see two options:\n\n\n\n'trace connection' or 'find backdoor'.", width / 2, height / 2 - 120);
+  text("the admin mode is exploding with ancient data.\nyou see two options:\n\n\n\n'initiate search' or 'begin system override'.", width / 2, height / 2 - 120);
 
   b1Button.pos = {
     x: -500,
@@ -858,7 +855,7 @@ function showScreen6() {
   };
 }
 
-// Screen 7: The Lurking Bot (from Screen 6: Trace Connection)
+// Screen 7: the bot (from Screen 6: Trace Connection)
 function showScreen7() {
   fill("#a32d2d"); // deep red
   rect(0, 0, 1200, 800, 40);
@@ -900,7 +897,7 @@ function showScreen7() {
   };
 }
 
-//Screen 8: The Hidden Backdoor (from Screen 6: Find Backdoor)
+//Screen 8: System override (From Screen 6: Find Backdoor)
 function showScreen8() {
   fill("#4a7c59"); 
   rect(0, 0, 1200, 800, 40);
@@ -909,7 +906,7 @@ function showScreen8() {
   textSize(30);
   stroke(255);
   fill(255);
-  text("you find a hidden backdoor, bypassing all security.\nyou slip through, back to your own world.\n\n\n\nend: escape to reality, forever changed.", width / 2, height / 2 - 120);
+  text("system override begins... \nyou have now taken control of the system. \nyou find a hidden backdoor, bypassing all security.\nyou slip through, back to your own world.\n\n\n\nend: escape to reality, forever changed.", width / 2, height / 2 - 120);
 
   a1Button.pos = {
     x: -500,
