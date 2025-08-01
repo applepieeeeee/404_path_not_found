@@ -719,6 +719,7 @@ function showScreen4() {
     x: width / 2,
     y: height / 2 + 200
   };
+
   c1Button.w = 300;
   c1Button.h = 80;
   c1Button.text = "explore mode";
