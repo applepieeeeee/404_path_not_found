@@ -797,7 +797,7 @@ function showScreen5() {
 
 }
 
-// Screen 6: The admin mode (from Screen 4: Explore Node)
+// Screen 6: The admin mode (from Screen 4: Explore mode)
 function showScreen6() {
   fill("#1f295eff");
   rect(0, 0, 1200, 800, 40);
@@ -843,8 +843,8 @@ function showScreen6() {
     y: height / 2 + 200
   };
   c2Button.w = 280;
-  c2Button.h = 80;
-  c2Button.text = "find backdoor";
+  c2Button.h = 120;
+  c2Button.text = "begin system \noverride";
   c2Button.textSize = 25;
   c2Button.textColor = '#fff3e7ff';
   c2Button.color = "#e6d7a4"; 
