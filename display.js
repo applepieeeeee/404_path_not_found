@@ -164,6 +164,7 @@ function draw() {
   enterButton.collider = "k";
   enterButton.color = "#e8c76b";
   enterButton.text = "enter";
+  enterButton.textColor = '#fff3e7ff'
 
   // Button 1: Flashy Ad Portal
   a1Button.w = 240;
