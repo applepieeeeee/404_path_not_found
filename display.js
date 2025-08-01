@@ -50,7 +50,6 @@ function preload() {
 }
 
 
-
 /* SETUP RUNS ONCE */
 function setup() {
   getAudioContext().suspend();
@@ -303,8 +302,6 @@ function touchStarted() {
 }
 
 
-
-
 // This function shows the homepage with information about meeeeee
 // It is called when you click on the smiski icon
 function showHomepage() {
@@ -391,8 +388,6 @@ function showHomepage() {
   };
 
 }
-
-
 
 
 
