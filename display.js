@@ -724,12 +724,6 @@ function showScreen4() {
     y: height / 2 + 200
   };
 
-  backButton.pos = {
-    x: -500,
-    y: -500
-  };
-
-
   c1Button.w = 300;
   c1Button.h = 80;
   c1Button.text = "explore mode";
