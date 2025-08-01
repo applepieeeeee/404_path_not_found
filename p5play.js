@@ -8,6 +8,7 @@
  * @descripton p5.play is a 2D game engine that uses planck (Box2D) to simulate
  * physics and provides sprites, a tile system, input handling, and animations!
  */
+
 p5.prototype.registerMethod('init', function p5PlayInit() {
   if (typeof window.planck == 'undefined') {
     throw new Error('planck.js must be loaded before p5.play');

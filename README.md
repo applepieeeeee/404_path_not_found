@@ -20,7 +20,10 @@
 ##### dice icon: https://www.pinterest.com/pin/211174978358408/
 ##### color picker icon: https://www.pinterest.com/pin/712835447264764039/
 ##### vinyl: PJ Harvey's "Uh Huh Her"
-
+##### sushi: https://www.pinterest.com/pin/5136987069705913/
+##### dumplings: @titcchefbear https://www.pinterest.com/pin/3448137208083414/
+##### mango: https://www.pinterest.com/pin/16747829861608176/
+##### frog: https://www.pinterest.com/pin/2040762327931054/
 
 
 [![Athena Award Badge](https://img.shields.io/endpoint?url=https%3A%2F%2Faward.athena.hackclub.com%2Fapi%2Fbadge)](https://award.athena.hackclub.com?utm_source=readme)
