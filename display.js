@@ -40,6 +40,7 @@ let pointer;
 let smiski;
 let backSmiski;
 
+let currentBackgroundColor;
 
 
 function preload() {
@@ -170,6 +171,7 @@ function setup() {
 
 /* DRAW LOOP REPEATS */
 function draw() {
+
   // Rotates the vinyl icon
   if (!isMuted) {
     musicButton.rotation += 1;
@@ -280,6 +282,8 @@ function draw() {
   c1Button.rotation = 0; 
   c2Button.rotation = 0;
   backButton.rotation = 0;
+
+  currentBackgroundColor = "#678377ff";
 
 }
 
