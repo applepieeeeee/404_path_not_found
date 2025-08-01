@@ -211,7 +211,8 @@ function draw() {
     }
   }
 
-  if ( smiski.mouse.presses() ){
+  if ( smiski.mouse.presses() || 
+        (mouseIsPressed && mouseX >= 1100 && mouseX <= width && mouseY >= 100 && mouseY <= 400)){
     showHomepage();
   }
 
@@ -249,6 +250,7 @@ function draw() {
   b2Button.rotation = 0;
 
 }
+
 
 
 /* MUSIC FUNCS */
@@ -339,6 +341,8 @@ function showScreen0(){
   background("#ffffff");
   fill("#678377ff");
   rect(0, 0, 1200, 800, 40); 
+  backButton.pos = {x: -500, y: -500};
+
 
   ball.visible = true;
   fish.visible = true;
