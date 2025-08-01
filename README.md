@@ -6,7 +6,7 @@
 
 # credits & attributions
 ## music credits!
-##### NewJeans - OMG (ver. lo-fi): https://www.youtube.com/watch?app=desktop&v=4aM4oTOZtuw&t=0s
+##### dani.hz, NewJeans - OMG (ver. lo-fi): https://www.youtube.com/watch?app=desktop&v=4aM4oTOZtuw&t=0s
 
 ## image credits! ~ most taken from pinterest, credits to respective owners
 ##### back button fish icon: https://www.pinterest.com/pin/4644405858994676
