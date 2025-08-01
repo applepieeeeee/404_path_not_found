@@ -168,7 +168,6 @@ function setup() {
 }
 
 
-
 /* DRAW LOOP REPEATS */
 function draw() {
   // Rotates the vinyl icon
@@ -194,7 +193,7 @@ function draw() {
   a2Button.w = 240;
   a2Button.h = 80;
   a2Button.text = "quiet...";
-  a2Button.color = "#dbcede";
+  a2Button.color = "#835590ff";
 
   fill(0);
 
@@ -223,6 +222,12 @@ function draw() {
   if (smiski.mouse.presses() ||
     (mouseIsPressed && mouseX >= 1100 && mouseX <= width && mouseY >= 100 && mouseY <= 400)) {
     showHomepage();
+  }
+  
+  if (star2.mouse.presses()){
+    print("star2 pressed, secret screen hehe");
+    showSecretScreen();
+    screen = 9;
   }
 
   if (screen == 1) {
@@ -270,7 +275,6 @@ function draw() {
   }
 
   enterButton.rotation = 0;
-  backButton.rotation = 0;
   a2Button.rotation = 0;
   b2Button.rotation = 0;
   c1Button.rotation = 0; 
@@ -525,7 +529,8 @@ function showScreen1() {
   a1Button.w = 240;
   a1Button.h = 80;
   a1Button.text = "ad portal";
-  a1Button.color = "#b89e9c";
+  a1Button.color = "#826967ff";
+  a1Button.textColor = '#fff3e7ff';
 
   // Button 2: Quiet Tunnel
   a2Button.pos = {
@@ -535,7 +540,8 @@ function showScreen1() {
   a2Button.w = 240;
   a2Button.h = 80;
   a2Button.text = "quiet...";
-  a2Button.color = "#d5c3daff";
+  a2Button.color = "#835590ff";
+  a2Button.textColor = '#fff3e7ff';
 
   // Hide new buttons
   c1Button.pos = {
@@ -600,7 +606,8 @@ function showScreen2() {
   b1Button.w = 280;
   b1Button.h = 80;
   b1Button.text = "download it";
-  b1Button.color = "#dea4bc";
+  b1Button.color = "#bd889eff";
+  b1Button.textColor = '#fff3e7ff';
 
   // Button 2: Run virus scan
   b2Button.pos = {
@@ -610,7 +617,8 @@ function showScreen2() {
   b2Button.w = 280;
   b2Button.h = 160;
   b2Button.text = "run virus \nscan";
-  b2Button.color = "#ffbfc6";
+  b2Button.color = "#ba5f6aff";
+  b2Button.textColor = '#fff3e7ff';
 
 }
 
@@ -710,7 +718,9 @@ function showScreen4() {
   c1Button.w = 300;
   c1Button.h = 80;
   c1Button.text = "explore mode";
-  c1Button.color = "#c7e8b8"; 
+  c1Button.textSize = 30;
+  c1Button.textColor = '#fff3e7ff';
+  c1Button.color = "#b1c3a9ff"; 
 
   c2Button.pos = {
     x: -500,
@@ -817,6 +827,8 @@ function showScreen6() {
   c1Button.w = 280;
   c1Button.h = 80;
   c1Button.text = "trace connection";
+  c1Button.textSize = 25;
+  c1Button.textColor = '#fff3e7ff';
   c1Button.color = "#9facd7ff"; 
 
   // Button 2: Find Backdoor
@@ -827,6 +839,8 @@ function showScreen6() {
   c2Button.w = 280;
   c2Button.h = 80;
   c2Button.text = "find backdoor";
+  c2Button.textSize = 25;
+  c2Button.textColor = '#fff3e7ff';
   c2Button.color = "#e6d7a4"; 
 
   backButton.pos = {
@@ -917,6 +931,68 @@ function showScreen8() {
     x: 160,
     y: 700
   };
+}
+
+function showSecretScreen() {
+  fill("#000000ff"); 
+  rect(0, 0, 1200, 800, 40);
+  drawTopBar();
+
+  textSize(36);
+  stroke(255);
+  fill("#f5ebddff"); 
+  text("a hidden message appears:\n'you've found the truth.\nthere is no escape.\nonly more paths.'", width / 2, height / 2 - 80);
+
+  textSize(24);
+  text("don't tell anyone you were here.", width / 2, height / 2 + 120);
+
+  // Hide all regular game sprites
+  ball.visible = false;
+  fish.visible = false;
+  fish2.visible = false;
+  fish3.visible = false;
+  cat.visible = false;
+  page.visible = false;
+  star1.visible = false;
+  star2.visible = false; // Hide star2 once on the secret screen
+  dice.visible = false;
+  colorpicker.visible = false;
+  smiski.visible = false;
+
+  // Hide all decision buttons
+  enterButton.pos = {
+    x: -500,
+    y: -500
+  };
+  a1Button.pos = {
+    x: -500,
+    y: -500
+  };
+  a2Button.pos = {
+    x: -500,
+    y: -500
+  };
+  b1Button.pos = {
+    x: -500,
+    y: -500
+  };
+  b2Button.pos = {
+    x: -500,
+    y: -500
+  };
+  c1Button.pos = {
+    x: -500,
+    y: -500
+  };
+  c2Button.pos = {
+    x: -500,
+    y: -500
+  };
+
+  backButton.pos = {
+    x: 160,
+    y: 700
+  }; 
 }
 
 
