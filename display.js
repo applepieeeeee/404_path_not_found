@@ -40,8 +40,6 @@ let pointer;
 let smiski;
 let backSmiski;
 
-let currentBackgroundColor;
-
 
 function preload() {
   font1 = loadFont('FONTS/MYFONT.ttf');
@@ -282,8 +280,6 @@ function draw() {
   c2Button.rotation = 0;
   backButton.rotation = 0;
 
-  currentBackgroundColor = "#678377ff";
-
 }
 
 
@@ -492,9 +488,21 @@ function showScreen0() {
 // This is the first screen where you choose between two portals
 function showScreen1() {
 
-  fill("#04214fff");
+  fill("#01183eff");
   rect(0, 0, 1200, 800, 40);
   drawTopBar();
+
+  // draw white circles for stars
+  for (let i = 0; i < 800; i++){
+    let x = random(0, width);
+    let y = random(80, height);
+    let r = random(0.1, 3);
+    fill(255);
+    noStroke();
+    ellipse(x, y, r, r);
+  }
+
+
 
   textSize(30);
   stroke(255);
