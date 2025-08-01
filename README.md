@@ -4,7 +4,11 @@
 ### i made this project on replit, then pushed it to github
 ### i started this project with the gwc sip this summer! 
 
-# image credits! ~ most taken from pinterest, credits to respective owners
+# credits & attributions
+## music credits!
+##### NewJeans - OMG (ver. lo-fi): https://www.youtube.com/watch?app=desktop&v=4aM4oTOZtuw&t=0s
+
+## image credits! ~ most taken from pinterest, credits to respective owners
 ##### back button fish icon: https://www.pinterest.com/pin/4644405858994676
 ##### smiski profile page button: https://www.pinterest.com/pin/2040762328621308
 ##### star icon: https://www.pinterest.com/pin/426645764719484804
