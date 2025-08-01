@@ -34,7 +34,6 @@ let dice;
 let colorpicker;
 
 let pointer;
-
 let smiski;
 let backSmiski;
 
