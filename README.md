@@ -13,5 +13,7 @@
 ##### black cat icon: https://www.pinterest.com/pin/23010648093130284
 ##### goldfish icon: https://www.pinterest.com/pin/2392606047810607
 ##### 8 ball icon: https://www.pinterest.com/pin/1073686367418112259
+##### dice icon: https://www.pinterest.com/pin/211174978358408/
+
 
 [![Athena Award Badge](https://img.shields.io/endpoint?url=https%3A%2F%2Faward.athena.hackclub.com%2Fapi%2Fbadge)](https://award.athena.hackclub.com?utm_source=readme)

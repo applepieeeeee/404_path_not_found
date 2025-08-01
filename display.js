@@ -30,6 +30,7 @@ let page;
 let star1;
 let star2;
 
+let dice;
 
 let pointer;
 
@@ -93,7 +94,7 @@ function setup() {
 
   page = new Sprite();
   page.img = loadImage('ICONS/page.png');
-  page.x = 220; 
+  page.x = 160; 
   page.y = 700; 
   page.visible = true;
   page.rotation = 16;
@@ -106,8 +107,8 @@ function setup() {
 
   star2 = new Sprite();
   star2.img = loadImage('ICONS/star2.png');
-  star2.x = 280; 
-  star2.y = 540; 
+  star2.x = 190; 
+  star2.y = 580; 
   star2.visible = true;
 
   smiski = new Sprite();
@@ -117,6 +118,12 @@ function setup() {
   smiski.collider = 'k';
   smiski.visible = true;
 
+  dice = new Sprite();
+  dice.img = loadImage('ICONS/dice.png');
+  dice.x = 330;
+  dice.y = height - 280;
+  dice.collider = 'k';
+  dice.visible = true; 
 
   // MUSIC BUTTON SPRITEE
   musicButton = new Sprite();
@@ -266,6 +273,7 @@ function showHomepage(){
   page.visible = false;
   star1.visible = false;
   star2.visible = false;
+  dice.visible = false;
 
   enterButton.pos = {x: -400, y: -400};
 
@@ -321,6 +329,7 @@ function showScreen0(){
   star1.visible = true;
   star2.visible = true;
   smiski.visible = true;
+  dice.visible = true;
 
   enterButton.pos = { x: width / 2, y: height / 2 + 180 };
   a1Button.pos = { x: -500, y: -500};
@@ -388,6 +397,7 @@ function showScreen1(){
   page.visible = false;
   star1.visible = false;
   star2.visible = false;
+  dice.visible = false;
 
   smiski.visible = false;
 
@@ -430,6 +440,7 @@ function showScreen2(){
   page.visible = false;
   star1.visible = false;
   star2.visible = false;
+  dice.visible = false;
 
   // Move extra buttons off screen
   a1Button.pos = { x: -500, y: -500 };
@@ -476,6 +487,7 @@ function showScreen3() {
   page.visible = false;
   star1.visible = false;
   star2.visible = false;
+  dice.visible = false;
 
   backButton.pos = { x: 160, y: 700 };
 
@@ -507,6 +519,7 @@ function showScreen4() {
   page.visible = false;
   star1.visible = false;
   star2.visible = false;
+  dice.visible = false;
 
   // Move extra buttons off screen
   b1Button.pos = { x: -500, y: -500 };
@@ -538,6 +551,7 @@ function showScreen5(){
   page.visible = false;
   star1.visible = false;
   star2.visible = false;
+  dice.visible = false;
 
   // Move extra buttons off screen
   a1Button.pos = { x: -500, y: -500 };
